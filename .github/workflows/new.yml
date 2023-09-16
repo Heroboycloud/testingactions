@@ -17,11 +17,7 @@ jobs:
   steps:
     - uses: action/checkout@v3
     - name: running multiple commands
-      run:|
-        echo First Command
-        echo Second Command
-
-
+      run:  echo ok
 
 
 
