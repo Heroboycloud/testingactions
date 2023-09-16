@@ -27,8 +27,6 @@ jobs:
    runs-on: ubuntu-latest
    name: Node setup
    steps:
-     - name: First Action
-       run: echo ok ready to run
      - uses: action/checkout@v3
      - uses: action/setup-node@v3
        with:
