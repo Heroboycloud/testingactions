@@ -1,0 +1,36 @@
+name: First time Writing cool Git Actions
+
+run-name: Actions for testActions
+
+on:
+ push:
+  branches: [ main ]
+ schedule:
+    - cron: "30 5,17 * * *"
+
+ workflow_dispatch:
+
+
+jobs:
+ build:
+  runs-on: ubuntu-latest
+  steps:
+    - uses: action/checkout@v3
+    - name: running multiple commands
+      run:  echo ok
+
+
+
+
+
+ test-schedule:
+   runs-on: ubuntu-latest
+   name: Node setup
+   steps:
+     - uses: action/checkout@v3
+     - uses: action/setup-node@v3
+       with:
+          node-version: '16'
+     - name: Running a node stuff,..
+       run: npm install jade -g
+     - run: jade -V
